@@ -16,7 +16,8 @@ nix flake new --template "github:nixvital/flake-templates#torch-basics" my-proje
 
 The available templates in this repository are:
 
-* torch-basics: a template for a basic machine learning project with PyTorch
+* `torch-basics`: a template for a basic machine learning project with PyTorch
+* `cpp-starter-kit`: a template for a c++ development project skeleton with `CMake`
 
 ## Customizing the Templatesn
 
