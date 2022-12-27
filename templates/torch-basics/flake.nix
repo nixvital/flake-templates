@@ -45,8 +45,10 @@
           # torchvisionWithCuda11
           # pytorchLightningWithCuda11
         ]);
-      in pkgs.mkShell {
+
         name = "torch-basics";
+      in pkgs.mkShell {
+        inherit name;
 
         packages = [
           python-env
