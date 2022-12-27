@@ -34,7 +34,7 @@
           overlays = [ self.overlays.default ];
         };
     in {
-      devShells = let
+      devShells.default = let
         python-env = pkgs.python3.withPackages (pyPkgs: with pyPkgs; [
           numpy
           pandas
