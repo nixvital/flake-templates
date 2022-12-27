@@ -12,6 +12,11 @@
         path = ./templates/cpp-starter-kit;
         description = "A nix based c++ development project skeleton with CMake";
       };
+
+      nixos-config = {
+        path = ./templates/nixos-config;
+        description = "Template for creating a repo that hosts your NixOS configurations";
+      };
     };
   };
 }

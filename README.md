@@ -18,6 +18,7 @@ The available templates in this repository are:
 
 * `torch-basics`: a template for a basic machine learning project with PyTorch
 * `cpp-starter-kit`: a template for a c++ development project skeleton with `CMake`
+* `nixos-config`: a template for creating a repo that hosts your NixOS configurations
 
 ## Customizing the Templatesn
 
