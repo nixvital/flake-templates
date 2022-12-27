@@ -27,11 +27,12 @@
       # })
     ];
   } // inputs.utils.lib.eachSystem [
+    "x86_64-linux"
   ] (system:
     let pkgs = import nixpkgs {
           inherit system;
           config.allowUnfree = true;
-          overlays = [ self.overlays.default ];
+          overlays = [ self.overlays.dev ];
         };
     in {
       devShells.default = let
