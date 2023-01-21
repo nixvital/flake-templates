@@ -8,6 +8,11 @@
         description = "Template for a basic machine learning project with PyTorch";
       };
 
+      langchain-basics = {
+        path = ./templates/langchain-basics;
+        description = "Template for a basic langchain project";
+      };
+
       cpp-starter-kit = {
         path = ./templates/cpp-starter-kit;
         description = "A nix based c++ development project skeleton with CMake";
