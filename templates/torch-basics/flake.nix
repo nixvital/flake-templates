@@ -19,7 +19,7 @@
       # if you want to put an inline overlay, uncomment below:
       #
       # (final: prev: {
-      #   pythonPackagesExtension = prev.pythonPackagesExtension ++ [
+      #   pythonPackagesExtensions = prev.pythonPackagesExtensions ++ [
       #     (python-final: python-prev: {
       #       my-package = ...;
       #     })
