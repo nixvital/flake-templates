@@ -22,6 +22,14 @@
         path = ./templates/nixos-config;
         description = "Template for creating a repo that hosts your NixOS configurations";
       };
+
+      js-webapp-basics = {
+        path = ./templates/js-webapp-basics;
+        description = ''
+          Template for creating repo of webapp development with Javascript
+          and Typescript
+        '';
+      };
     };
   };
 }
