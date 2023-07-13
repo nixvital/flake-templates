@@ -2,7 +2,7 @@
   description = "An awesome langchain project";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
 
     utils.url = "github:numtide/flake-utils";
 
@@ -42,7 +42,7 @@
           numpy
           openai
           langchain
-        ]);
+        ] ++ (with langchain.passthru.optional-dependencies; utils));
 
         name = "langchain-basics";
       in pkgs.mkShell {
