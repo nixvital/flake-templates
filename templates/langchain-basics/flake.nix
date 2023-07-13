@@ -14,7 +14,7 @@
   outputs = { self, nixpkgs, ... }@inputs: {
     overlays.dev = nixpkgs.lib.composeManyExtensions [
       inputs.ml-pkgs.overlays.torch-family
-      inputs.ml-pkgs.overlays.misc
+      inputs.ml-pkgs.overlays.apis
       inputs.ml-pkgs.overlays.langchain
 
       # You can put your other overlays here, inline or with import. For example
