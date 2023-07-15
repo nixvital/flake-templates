@@ -37,6 +37,17 @@
       stdenv = pkgs-dev.clang16Stdenv;
       clang-tools = pkgs-dev.clang-tools_16;
     };
+
+    # Normally you do not need this playground dev shell. Put it here just for
+    # testing purpose so that we can explicitly test the resulting package.
+    devShells.playground = pkgs.mkShell {
+      packages = [
+        (pkgs.python3.withPackages (pyPkgs: with pyPkgs; [
+          starterpp
+        ]))
+      ];
+    };
+      
     packages.default = pkgs.python3Packages.starterpp;
   });
 }
