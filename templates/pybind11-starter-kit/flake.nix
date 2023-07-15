@@ -13,7 +13,13 @@
       dev = final: prev: {};
 
       # The default overlay adds the resulting pybind11 package.
-      default = final: prev: {};
+      default = final: prev: {
+        pythonPackagesExtensions = prev.pythonPackagesExtensions ++ [
+          (py-final: py-prev: {
+            starterpp = py-final.callPackage ./nix/default.nix {};
+          })
+        ];
+      };
     };
   } // utils.lib.eachSystem [ "x86_64-linux" "aarch64-linux" ] (system: let
     pkgs-dev = import nixpkgs {
@@ -31,7 +37,6 @@
       stdenv = pkgs-dev.clang16Stdenv;
       clang-tools = pkgs-dev.clang-tools_16;
     };
+    packages.default = pkgs.python3Packages.starterpp;
   });
 }
-
-    
