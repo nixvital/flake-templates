@@ -19,8 +19,11 @@ The available templates in this repository are:
 * `torch-basics`: a template for a basic machine learning project with PyTorch
 * `cpp-starter-kit`: a template for a c++ development project skeleton with `CMake`
 * `nixos-config`: a template for creating a repo that hosts your NixOS configurations
+* `js-webapp-basics`: a template for creating javascript/typescript web application development environment
+* `langchain-basics`: a template for creating a `langchain` based LLM application
+* `pybind11-starter-kit`: a template that creates a skeleton for a `pybind11` module, including development environment and nix packaging
 
-## Customizing the Templatesn
+## Customizing the Templates
 
 Each template contains a `flake.nix` file that defines the structure of the flake. You can customize the flake by modifying the `flake.nix` file and the other files in the template.
 
