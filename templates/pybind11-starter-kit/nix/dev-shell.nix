@@ -32,6 +32,10 @@ in mkClangShell rec {
 
     # Development Tools
     clang-tools
+
+    # Other dependencies
+    spdlog
+    gtest
   ];
 
   shellHook = ''
