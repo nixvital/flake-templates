@@ -30,6 +30,13 @@
           and Typescript
         '';
       };
+
+      pybind11-starter-kit = {
+        path = ./templates/pybind11-starter-kit;
+        description = ''
+          Template for creating initial skeleton for a pybind11 project
+        '';
+      };
     };
   };
 }
