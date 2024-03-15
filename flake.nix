@@ -8,6 +8,11 @@
         description = "Template for a basic machine learning project with PyTorch";
       };
 
+      jax-equinox-basics = {
+        path = ./templates/jax-equinox-basics;
+        description = "Template for a basic machine learning project with Jax (equinox)";
+      };
+
       langchain-basics = {
         path = ./templates/langchain-basics;
         description = "Template for a basic langchain project";
