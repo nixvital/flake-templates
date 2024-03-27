@@ -17,7 +17,7 @@
   outputs = { self, nixpkgs, ... }@inputs: inputs.utils.lib.eachSystem [
     # Add the system/architecture you would like to support here. Note that not
     # all packages in the official nixpkgs support all platforms.
-    "x86_64-linux" "i686-linux" "aarch64-linux" "x86_64-darwin"
+    "x86_64-linux" "i686-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin"
   ] (system: let
     pkgs = import nixpkgs {
       inherit system;
