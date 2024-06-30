@@ -42,6 +42,13 @@
           Template for creating initial skeleton for a pybind11 project
         '';
       };
+
+      maturin-basics = {
+        path = ./templates/maturin-basics;
+        description = ''
+          Minimal starting project for nix-based maturin package development
+        '';
+      };
     };
   };
 }
