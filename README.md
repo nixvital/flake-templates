@@ -22,6 +22,7 @@ The available templates in this repository are:
 * `js-webapp-basics`: a template for creating javascript/typescript web application development environment
 * `langchain-basics`: a template for creating a `langchain` based LLM application
 * `pybind11-starter-kit`: a template that creates a skeleton for a `pybind11` module, including development environment and nix packaging
+* [maturin-basics](./templates/maturin-basics): a template as the starting point for building a `pyo3` (rust) based python package.
 
 ## Customizing the Templates
 
