@@ -25,6 +25,7 @@ in {
         pyright
         ruff
         pre-commit
+        hatch
       ];
 
       shellHook = ''
