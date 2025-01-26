@@ -49,6 +49,13 @@
           Minimal starting project for nix-based maturin package development
         '';
       };
+
+      python-project = {
+        path = ./templates/python-project;
+        description = ''
+          Minimal starting project for nix-based python project development
+        '';
+      };
     };
   };
 }
