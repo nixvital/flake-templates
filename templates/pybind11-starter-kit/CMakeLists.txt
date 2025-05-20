@@ -11,6 +11,13 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
+# Generate compile_commands.json to make tree-sitter happy.
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "")
+if(CMAKE_EXPORT_COMPILE_COMMANDS)
+  set(CMAKE_CXX_STANDARD_INCLUDE_DIRECTORIES 
+      ${CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES})
+endif()
+
 # By default build the release version with O3
 if (NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
@@ -50,3 +57,8 @@ find_package(spdlog REQUIRED)
 
 include_directories(${PROJECT_SOURCE_DIR}/src)
 pybind11_add_module(starterpp src/starterpp.cc)
+
+install(
+  TARGETS starterpp
+  LIBRARY DESTINATION "${CMAKE_INSTALL_PREFIX}"
+)

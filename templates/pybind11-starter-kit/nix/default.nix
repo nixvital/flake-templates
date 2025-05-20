@@ -1,35 +1,33 @@
 { lib
-, buildPythonPackage
-, pythonOlder
-, cmake
-, pybind11
-, spdlog
-, numpy
+  , buildPythonPackage
+  , pythonOlder
+  , cmake
+  , scikit-build-core
+  , ninja
+  , pybind11
+  , spdlog
+  , numpy
 }:
 
 buildPythonPackage rec {
   pname = "starterpp";
   version = "1.0.0";
-  format = "setuptools";
+  pyproject = true;
 
   disabled = pythonOlder "3.8";
 
   src = ../.;
 
-  propagatedBuildInputs = [
+  build-system = [ scikit-build-core ninja cmake pybind11 ];
+  dontUseCmakeConfigure = true;
+  
+  dependencies = [
     numpy
   ];
 
   buildInputs = [
-    pybind11
     spdlog
   ];
-
-  nativeBuildInputs = [
-    cmake
-  ];
-
-  dontUseCmakeConfigure = true;
 
   pythonImportCheck = [ "starterpp" ];
 
