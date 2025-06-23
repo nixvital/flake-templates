@@ -15,3 +15,5 @@
    ```
    
 3. Following the instruction [here](https://tailwindcss.com/docs/installation/using-vite) to configure the tailwindcss plugin. Without vite, you'd want to run tailwind cli to constantly watch the changes and translate the tailwind css classes. With the vite plugin for tailwind configured, vite will do the job.
+
+4. If you want DaisyUI, follow [this tutorial](https://daisyui.com/docs/install/vite/).
