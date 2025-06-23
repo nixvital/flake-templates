@@ -28,11 +28,10 @@
         description = "Template for creating a repo that hosts your NixOS configurations";
       };
 
-      js-webapp-basics = {
-        path = ./templates/js-webapp-basics;
+      pnpm-webapp-starter = {
+        path = ./templates/pnpm-webapp-starter;
         description = ''
-          Template for creating repo of webapp development with Javascript
-          and Typescript
+          Template for creating repo of webapp development with pnpm.
         '';
       };
 
